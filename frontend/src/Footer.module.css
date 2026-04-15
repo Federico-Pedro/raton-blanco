@@ -1,0 +1,39 @@
+.footer {
+    width: 33vw;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed;
+    bottom: 0; */
+    z-index: 100;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+.headerTitle {
+    color: var(--gray);
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+.copyright {
+    color: var(--gray);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+
+}

@@ -1,0 +1,117 @@
+:root {
+    background-color: var(--white);
+
+}
+
+.adminContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 150px; */
+    padding: 25px;
+    background-color: var(--white);
+    /* border: 1px solid red; */
+}
+
+.adminContainer h2 {
+    padding: 15px;
+    width: 100%;
+    color: var(--gray);
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+
+}
+
+.success,
+.error {
+    color: var(--gray);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+}
+
+.success {
+    color: rgb(10, 116, 27)
+}
+
+.error {
+    color: rgb(184, 39, 39)
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    /* border: 1px solid red; */
+}
+
+.loginMessage {
+    color: var(--gray)
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    width: 95%;
+    color: var(--gray);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+}
+
+.input {
+    margin-top: 20px;
+    width: 50%;
+    height: 1.5rem;
+    border-radius: 8px;
+    
+
+}
+
+
+.button {
+    background: var(--white);
+    font-size: 1rem;
+    color: var(--olive);
+    margin: 1rem;
+    padding: 0.75rem 2rem;
+    height: 45px;
+    width: 200px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background: var(--gray);
+    color: var(--white);
+}
+
+.resend {
+    font-size: 1rem;
+    color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    margin-top: 50px;
+    padding: 25px;
+}
+
+.resend h6 {
+    font-size: 1.5rem;
+}
+
+.resend form {
+    font-size: 1rem;
+    color: var(--gray);
+}
