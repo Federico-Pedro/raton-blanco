@@ -6,6 +6,8 @@ import RegistrationForm from './users/RegistrationForm'
 import Login from './users/Login'
 import Body from './Body'
 import Profile from './users/Profile'
+import CreateProductForm from './products/CreateProductForm'
+import Admin from './users/Admin'
 import './App.css'
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/registrationForm" element={<RegistrationForm />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/productForm" element={<CreateProductForm />} />
+          <Route path="/admin" element={<Admin />} />
 
         </Routes>
       </main>
