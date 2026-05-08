@@ -1,4 +1,5 @@
 package com.ratonblanco.backend.service;
+import com.ratonblanco.backend.repository.FavoriteRepository;
 import com.ratonblanco.backend.util.JwtUtil;
 import com.ratonblanco.backend.entity.User;
 import com.ratonblanco.backend.repository.UserRepository;
@@ -16,12 +17,14 @@ public class UserService {
     private final BCryptPasswordEncoder passwordEncoder;
     private final EmailService emailService;
     private final JwtUtil jwtUtil;
+    private final FavoriteRepository favoriteRepository;
 
-    public UserService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, EmailService emailService, JwtUtil jwtUtil) {
+    public UserService(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, EmailService emailService, JwtUtil jwtUtil, FavoriteRepository favoriteRepository) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.emailService = emailService;
         this.jwtUtil = jwtUtil;
+        this.favoriteRepository = favoriteRepository;
     }
 
     public User createUser(String name, String lastName, String email, String password, String role) {
@@ -89,11 +92,10 @@ public class UserService {
     }
 
     public void deleteUser(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
-        if (!userRepository.existsByEmail(email)) {
-            throw new RuntimeException("Usuario no encontrado");
-        }
-
+        favoriteRepository.deleteByUserId(user.getId());
         userRepository.deleteByEmail(email);
     }
 

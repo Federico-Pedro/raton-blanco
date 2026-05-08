@@ -37,8 +37,8 @@ const Admin = () => {
   return (
     <div className={styles.adminContainer}>
       <Link to="/productForm" className={styles.adminButon}>Cargar un producto</Link>
-      <Link to="/userstable" className={styles.adminButon}>Administrar Usuarios</Link>
-      <Link to="/table" className={styles.adminButon}>Administrar Productos</Link>
+      <Link to="/usersTable" className={styles.adminButon}>Administrar Usuarios</Link>
+      <Link to="/productsTable" className={styles.adminButon}>Administrar Productos</Link>
       <Link to="/category" className={styles.adminButon}>Administrar Categorías</Link>
 
     </div>

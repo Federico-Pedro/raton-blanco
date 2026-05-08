@@ -47,11 +47,15 @@ label {
 
 }
 
-textarea {
-    width: 350px;
-
+.textarea {
+    width: 600px;
+    border: 1px solid var(--gray);
+    resize: none
 }
 
+.textarea:focus {
+    border: 1px solid var(--gray)
+}
 
 
 .button {

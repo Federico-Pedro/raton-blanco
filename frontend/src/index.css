@@ -1,13 +1,20 @@
-
+@font-face {
+  font-family: 'Pompiere';
+  src: url('public/fonts/Pompiere-Regular.ttf');
+}
 @font-face {
   font-family: 'Amsterdam';
   src: url('public/fonts/Amsterdam.ttf');
 }
-
+@font-face {
+  font-family: 'Eyesome';
+  src: url('public/fonts/Eyesome-Script.otf');
+}
 
 
 :root {
   --gray: #6b6b6b;
+  --dark: #4b4b4b;
   --white: #fcfcfc;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;

@@ -27,9 +27,8 @@ public class ProductController {
                 request.getName(),
                 request.getDescription(),
                 request.getImages(),
-                request.getCategoryIds(),
-                request.getCharacteristicIds(),
-                request.getPolitics()
+                request.getCategoryIds()
+
         );
         return ResponseEntity.status(HttpStatus.CREATED).body(createdProduct);
     }
@@ -58,9 +57,8 @@ public class ProductController {
                 request.getName(),
                 request.getDescription(),
                 request.getImages(),
-                request.getCategoryIds(),
-                request.getCharacteristicIds(),
-                request.getPolitics()
+                request.getCategoryIds()
+
         );
         return ResponseEntity.ok(updateProduct);
     }

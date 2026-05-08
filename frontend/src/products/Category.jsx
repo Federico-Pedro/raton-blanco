@@ -85,9 +85,19 @@ const Category = () => {
             }
 
             if (editing) {
-                await axios.put(`${import.meta.env.VITE_API_URL}/api/categories/${id}`, categoryData);
+                await axios.put(`${import.meta.env.VITE_API_URL}/api/categories/${id}`, categoryData, {
+                    headers: {
+
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setCategoryName('');
+                setDescription('');
+                setId(undefined);
+
                 const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/categories`);
                 setCategories(response.data)
+
 
 
             } else {
@@ -154,6 +164,8 @@ const Category = () => {
         )
     }
 
+
+
     return (
 
         <div className={styles.body}>
@@ -215,12 +227,22 @@ const Category = () => {
                                 onChange={(e) => setDescription(e.target.value)}
                                 placeholder="Descripción"
                                 id="description"
-                                className={styles.inputMargin}></textarea>
+                                className={styles.textarea}>
+                            </textarea>
                         </label>
 
                     </div>
 
                     <button className={styles.button} type="submit">{editing ? 'Actualizar categoría' : 'Agregar categorìa'}</button>
+                    {editing && (
+                        <button className={styles.button} onClick={() => {
+                            setId(undefined);
+                            setCategoryName('');
+                            setDescription('');
+                        }}>
+                            Cancelar edición
+                        </button>
+                    )}
                 </form>
             </div>
         </div>

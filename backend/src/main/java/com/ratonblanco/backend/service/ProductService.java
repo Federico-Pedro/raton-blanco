@@ -26,7 +26,7 @@ public class ProductService {
     }
 
 
-    public Product createProduct(String name, String description, List<String> images, List<Long> categoryIds, List<Long> characteristicIds, List<String> politics) {
+    public Product createProduct(String name, String description, List<String> images, List<Long> categoryIds) {
         if (productRepository.existsByName(name)) {
             throw new ProductAlreadyExistsException("Ya existe un producto con el nombre: " + name);
         }
@@ -55,7 +55,7 @@ public class ProductService {
                 .orElseThrow(() -> new RuntimeException("Product not found with ID: " + id));
     }
 
-    public Product updateProduct(Long id, String name, String description, List<String> images, List<Long> categoryIds, List<Long> characteristicIds, List<String> politics) {
+    public Product updateProduct(Long id, String name, String description, List<String> images, List<Long> categoryIds) {
         Product existingProduct = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Producto no encontrado con id: " + id));
 

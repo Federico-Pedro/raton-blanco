@@ -22,9 +22,6 @@ public class ProductRequest {
     @NotEmpty(message = "La categoría es obligatoria")
     private List<Long> categoryIds;
 
-    private List<Long> characteristicIds;
 
-    @NotNull(message = "Las politicas son obligatorias")
-    private List<String> politics;
 
 }

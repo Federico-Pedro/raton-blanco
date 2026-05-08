@@ -1,0 +1,456 @@
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 93vw;
+}
+
+.container {
+    min-height: 65vh;
+    padding: 10px 0;
+    display: grid;
+    place-items: left;
+    margin-top: 50px;
+    overflow: hidden;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+
+.container h1 {
+    font-family: 'Arial';
+    color: var(--gray);
+    font-size: 2rem;
+    line-height: 30px;
+    height: 40px;
+    margin: 10px 0;
+    /* padding: 10px 0 10px 0; */
+    overflow: hidden;
+    padding: 8px 8px;
+
+}
+
+.productNameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    font-size: 1.5rem;
+    z-index: 2;
+    /* border: 1px solid green; */
+
+}
+
+.productNameContainer i:first-child {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    /* margin-right: 50px; */
+    color: rgb(165, 54, 54);
+
+}
+
+.productNameContainer i:first-child:hover {
+    color: rgb(226, 35, 35);
+}
+
+.productNameContainer i {
+    color: var(--gray);
+    cursor: pointer;
+    margin: 20px;
+}
+
+.productNameContainer i:hover {
+    opacity: 50%;
+}
+
+.back {
+    height: 40px;
+    width: auto;
+
+}
+
+.imageContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas */
+    grid-template-rows: repeat(2, 200px);
+    /* 2 filas */
+    gap: 1rem;
+    padding: 25px;
+    width: 93vw;
+    place-items: center;
+    overflow: hidden;
+    margin: auto;
+    /* border: solid red 1px */
+}
+
+
+.mainImage {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.smallImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+.productDescription {
+    font-family: 'Arial';
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    /* padding: 0 0 20px 0; */
+    color: var(--gray);
+    overflow: hidden;
+}
+
+.productLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+
+.productDescription {
+    /* border: 1px solid red; */
+    width: 75vw;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.iconsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.button {
+    text-decoration: none;
+    background: var(--black-olive);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--olive);
+    margin: 1rem;
+    padding: 0.75rem 2rem;
+    height: 60px;
+    width: 300px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border: 1px solid var(--raw-umber);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button:hover {
+    background: var(--olive);
+    color: var(--black-olive);
+}
+
+.success {
+    color: rgb(65, 168, 65);
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.error {
+    color: rgb(196, 52, 52);
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.shareModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--gray);
+    height: 700px;
+    width: 50vw;
+    padding: 15px;
+    z-index: 9999;
+    font-size: 1.3rem;
+    padding: 20px;
+    overflow: hidden;
+
+}
+
+.modalImage {
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+}
+
+
+
+
+.shareModalTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.shareModalTitle h3 {
+    font-size: 1.2rem;
+}
+
+.shareModal i {
+    font-size: 2rem;
+    color: var(--jasmine);
+    cursor: pointer;
+    margin: 25px;
+
+}
+
+.iconContainter {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 8888;
+}
+
+.reserveModal {
+    width: 80vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    border: 1px solid var(--raw-umber);
+    border-radius: 8px;
+    background-color: var(--black-olive);
+    color: var(--jasmine);
+    z-index: 9999;
+    font-size: 1.3rem;
+    padding: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.reserveInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    /* border: 1px solid green; */
+    gap: 20px
+        /* margin-bottom: 20px; */
+}
+
+.reserveTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.reserveTitleContainer i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.reserveImage {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.mapContainer {
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reserveForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+
+.reservationMessage {
+    margin-top: 25px;
+    color: var(--dark-moss-green);
+    font-size: 1.3rem;
+}
+
+
+.starContainer {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reserveButton {
+    width: 150px;
+    height: 35px;
+    text-decoration: none;
+    background: var(--dark-moss-green);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ghost-white);
+    margin: 1rem;
+    margin-top: 60px;
+    padding: 0.75rem 2rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border: 1px solid var(--raw-umber);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cancelButton {
+    background-color: rgb(161, 64, 64);
+}
+
+.reserveButton:hover {
+    background: var(--olive);
+    color: var(--black-olive);
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+    .iconsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reserveModal {
+        height: 75vh;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reserveInfoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shareModal {
+        font-size: 1rem;
+    }
+
+    .shareModal i {
+        font-size: 1.5rem;
+        margin: 20px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .shareModal {
+        font-size: 1rem;
+    }
+
+    .shareModal i {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+
+    .button {
+        width: 200px;
+        height: 50px;
+    }
+
+    .shareModal textarea {
+        width: 80%;
+    }
+
+
+    .imageContainer {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .mainImage,
+    .smallImage {
+        width: 300px;
+        height: auto;
+    }
+}

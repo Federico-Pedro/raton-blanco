@@ -1,0 +1,49 @@
+.body{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.th{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--gray);
+    width: 200px;
+    /* border: 1px solid red; */
+}
+
+.buttonCell{
+    width: 300px;
+    display: flex;
+    gap: 0.5rem; 
+    justify-content: center;
+    
+}
+
+.tableBody{
+    text-align: center;
+    color: white;
+}
+
+.editButton, .deleteButton{
+    text-decoration: none;
+    background: var(--white);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--gray);
+    height: 30px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    
+    overflow: hidden;
+}
+
+
+.editButton:hover, .deleteButton:hover{
+    background: var(--gray);
+    color: var(--white);
+}

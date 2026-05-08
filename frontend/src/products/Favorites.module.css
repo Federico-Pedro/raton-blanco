@@ -1,0 +1,120 @@
+.body {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.th {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--gray);
+    width: 200px;
+    /* border: 1px solid red; */
+}
+
+.link {
+    text-decoration: none;
+    color: var(--gray)
+}
+
+.link:hover{
+    color: var(--dark)
+}
+.tableBody {
+    text-align: center;
+    color: white;
+}
+
+.deleteButton,
+.adminButton {
+    text-decoration: none;
+    background: var(--white);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--gray);
+    height: 30px;
+    width: 80px;
+    box-sizing: border-box;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.deleteButton {
+    width: fit-content
+}
+
+
+.editButton:hover,
+.deleteButton:hover {
+    background: var(--gray);
+    color: var(--white);
+}
+
+i {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .body {
+        margin-left: 5px;
+    }
+
+    table {
+        margin: 0;
+    }
+
+    .buttonCell {
+        width: 200px;
+    }
+
+    .th {
+        font-size: 1.2rem;
+        width: 150px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .body {
+        margin-top: 200px;
+        padding: 0;
+    }
+
+
+    .th {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--olive);
+        width: 150px;
+
+    }
+
+    .buttonCell {
+        width: 150px;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+
+    }
+
+
+
+    .deleteButton,
+    .adminButton {
+        font-size: 0.6rem;
+        font-weight: 500;
+        height: 20px;
+        width: 100px;
+
+    }
+
+}
